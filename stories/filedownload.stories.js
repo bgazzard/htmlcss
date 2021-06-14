@@ -1,12 +1,14 @@
-import './assets/spinner.css';
+import React from 'react';
 
-import './filedownload.css';
-
-const html = require('./filedownload.html');
+import { Filedownload } from './Filedownload';
 
 export default {
-  title: 'File Download',
+  title: 'File download',
+  component: Filedownload,
 };
 
-export const FileDownload = () => html;
+const Template = (args) => <Filedownload {...args} />;
 
+export const Default = Template.bind({});
+Default.args = {
+};
